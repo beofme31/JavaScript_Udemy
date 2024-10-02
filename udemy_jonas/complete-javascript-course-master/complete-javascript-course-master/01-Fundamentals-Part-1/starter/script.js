@@ -39,7 +39,134 @@
 
 //  JavaScript has dynamic typing: We don't have to manually define the data type of the value stored in a variable. Instead, data types are determined automatically.
 
-let javascriptIsFun = true;
-console.log(javascriptIsFun);
+// let javascriptIsFun = true;
+// console.log(javascriptIsFun);
 
-console.log(typeof javascriptIsFun);
+// console.log(typeof javascriptIsFun);
+
+// const firstName = 'Jonas';
+// const job = 'teacher';
+// const birthYear = 1991;
+// const year = 2037;
+
+// const jonas = "I'm " + firstName + ', a ' + (year - birthYear) + ' year old ' + job + '!';
+// console.log(jonas);
+
+// const jonasNew = `I'm ${firstName}, a ${year - birthYear} year old ${job}!`
+// console.log(jonasNew);
+
+// console.log('String with \n\
+// multiple \n\
+// lines');
+
+// console.log(`String
+// multiple
+// lines`);
+
+// const age = 15;
+
+// if (age >= 18) {
+//   console.log('Sarah can start driving license 🚗')
+// } else {
+//   const yearsLeft = 18 - age;
+//   console.log(`Sarah is too young. Wait another ${yearsLeft} years :)`);
+// }
+
+// const birthYear = 2012;
+
+// let century;
+// if (birthYear <= 2000) {
+//   century = 20;
+// } else {
+//   century = 21;
+// }
+// console.log(century);
+
+// type conversion(타입 변환)
+// const inputYear = '1991'
+// console.log(Number(inputYear), inputYear);
+// console.log(Number(inputYear) + 18);
+
+// console.log(Number('Jonas'));
+// console.log(typeof Nan);
+
+// console.log(String(23), 23);
+
+// // type coercion(타입 강제)
+// console.log('I am ' + 23 + 'years old.');
+// // console.log('I am ' + '23' + 'years old.');
+// // console.log('I am ' + String(23) + 'years old.');
+// console.log('23' - '10' - 3);
+// console.log('23' / '2');
+
+// let n = '1' + 1; // '11'
+// n = n - 1;
+// console.log(n);
+
+// 5 falsy values: 0, '', undefined, null, Nan
+
+// console.log(Boolean(0)); // false
+// console.log(Boolean(undefined)); // false
+// console.log(Boolean('Jonas')); // true
+// console.log(Boolean({})); // true
+// console.log(Boolean('')); // false
+
+// const money = 0
+// if (money) {
+//   console.log("Don't spend it all :)");
+// } else {
+//   console.log('You should get a job!');
+// }
+
+// let height = 0;
+// if (height) {
+//   console.log('YAY! Height is defined');
+// } else {
+//   console.log('Height is UNDEFINED');
+// }
+
+// const age = '18';
+// if (age === 18) console.log('You just became an adult :D (strict)');
+
+// if (age == 18) console.log('You just became an adult :D (loose)');
+
+// const favorite = Number(prompt("What's your favorite number?"));
+// console.log(favorite);
+// console.log(typeof favorite);
+
+// if (favorite === 23) { // 23 == 23
+//   console.log('Cool! 23 is an amazing number!');
+// } else if (favorite === 7) {
+//   console.log('7 is also a cool number');
+// } else if (favorite === 9) {
+//   console.log('9 is also a cool number');
+// } else {
+//   console.log('Number is not 23 or 7');
+// }
+
+// if (favorite !== 23) console.log('Why not 23?');
+
+const hasDriversLicense = true; // A
+const hasGoodVision = true; // B
+
+console.log(hasDriversLicense && hasGoodVision);
+console.log(hasDriversLicense || hasGoodVision);
+console.log(!hasDriversLicense);
+
+const shouldDrive = hasDriversLicense && hasGoodVision;
+
+// if (shouldDrive) {
+//   console.log('Sarah is able to drive!');
+// } else {
+//   console.log('Someone else should drive...');
+// }
+
+const isTired = false; // C
+console.log(hasDriversLicense && hasGoodVision && isTired);
+
+
+if (hasDriversLicense && hasGoodVision && !isTired) {
+  console.log('Sarah is able to drive!');
+} else {
+  console.log('Someone else should drive...');
+}
