@@ -1,7 +1,9 @@
 'use strict';
 
-const averageDolphins = (96 + 108 + 89) / 3;
-const averageKoalas = (88 + 91 + 110) / 3;
+const averageDolphins = (97 + 112 + 101) / 3;
+const averageKoalas = (109 + 95 + 123) / 3;
+console.log(averageDolphins);
+console.log(averageKoalas);
 
 if (averageDolphins > averageKoalas) {
   console.log('Dolphins wins!');

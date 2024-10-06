@@ -146,27 +146,31 @@
 
 // if (favorite !== 23) console.log('Why not 23?');
 
-const hasDriversLicense = true; // A
-const hasGoodVision = true; // B
+// const hasDriversLicense = true; // A
+// const hasGoodVision = true; // B
 
-console.log(hasDriversLicense && hasGoodVision);
-console.log(hasDriversLicense || hasGoodVision);
-console.log(!hasDriversLicense);
+// console.log(hasDriversLicense && hasGoodVision);
+// console.log(hasDriversLicense || hasGoodVision);
+// console.log(!hasDriversLicense);
 
-const shouldDrive = hasDriversLicense && hasGoodVision;
+// const shouldDrive = hasDriversLicense && hasGoodVision;
 
-// if (shouldDrive) {
+// // if (shouldDrive) {
+// //   console.log('Sarah is able to drive!');
+// // } else {
+// //   console.log('Someone else should drive...');
+// // }
+
+// const isTired = false; // C
+// console.log(hasDriversLicense && hasGoodVision && isTired);
+
+
+// if (hasDriversLicense && hasGoodVision && !isTired) {
 //   console.log('Sarah is able to drive!');
 // } else {
 //   console.log('Someone else should drive...');
 // }
 
-const isTired = false; // C
-console.log(hasDriversLicense && hasGoodVision && isTired);
-
-
-if (hasDriversLicense && hasGoodVision && !isTired) {
-  console.log('Sarah is able to drive!');
-} else {
-  console.log('Someone else should drive...');
-}
+const scoreDolphins = (96 + 108 + 89) / 3;
+const scoreKoalas = (88 + 91 + 110) / 3;
+console.log(scoreDolphins, scoreKoalas);
