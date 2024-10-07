@@ -69,43 +69,75 @@
 // // great for a quick one-line functions. Has no this keyword (more later...)
 // const calcAge3 = birthYear => 2037 - birthYear;
 
-const friend1 = 'Michael'
-const friend2 = 'Steven'
-const friend3 = 'Peter'
+// const friend1 = 'Michael'
+// const friend2 = 'Steven'
+// const friend3 = 'Peter'
 
-const friends = ['Michael', 'Steven', 'Peter']
-console.log(friends)
+// const friends = ['Michael', 'Steven', 'Peter']
+// console.log(friends)
 
 // const years = new Array(1991, 1984, 2008, 2020);
 // console.log(years)
 
-console.log(friends[0])
-console.log(friends[2])
+// console.log(friends[0])
+// console.log(friends[2])
 
-console.log(friends.length)
-console.log(friends[friends.length - 1])
+// console.log(friends.length)
+// console.log(friends[friends.length - 1])
 
-friends[2] = 'Jay'
+// friends[2] = 'Jay'
+// console.log(friends)
+// // friends = ['Bob', 'Alice']
+
+// const firstName = 'Jonas'
+// const jonas = [firstName, 'Schmedtmann', 2037 - 1991, 'teacher', friends]
+// console.log(jonas)
+// console.log(jonas.length)
+
+
+// // Exercise
+// const calcAge = function (birthYear) {
+//   return 2037 - birthYear
+// }
+// const years = [1990, 1967, 2002, 2010, 2018]
+
+// // console.log(calcAge(years)) // Nan
+// const age1 = calcAge(years[0])
+// const age2 = calcAge(years[1])
+// const age3 = calcAge(years[years.length - 1])
+// console.log(age1, age2, age3)
+
+// const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length - 1])]
+// console.log(ages)
+
+const friends = ['Michael', 'Steven', 'Peter']
+
+// Add elements
+const newLength = friends.push('Jay') // push 함수는 배열의 값을 반환
 console.log(friends)
-// friends = ['Bob', 'Alice']
+console.log(newLength)
 
-const firstName = 'Jonas'
-const jonas = [firstName, 'Schmedtmann', 2037 - 1991, 'teacher', friends]
-console.log(jonas)
-console.log(jonas.length)
+friends.unshift('John')
+console.log(friends)
 
+// Remove elements
+friends.pop() // Last
+const popped = friends.pop() // pop 함수는 제거된 요소를 반환
+console.log(popped) // Peter
+console.log(friends)
 
-// Exercise
-const calcAge = function (birthYear) {
-  return 2037 - birthYear
+friends.shift() // First
+console.log(friends)
+
+console.log(friends.indexOf('Steven'))
+console.log(friends.indexOf('Bob')) // 없으면 -1
+
+friends.push(23)
+console.log(friends.includes('Steven')) // true
+console.log(friends.includes('Bob')) // false
+console.log(friends.includes('23')) // false, 형식적인 강압을 안 함
+console.log(friends.includes(23)) // true, 숫자면 숫자로 물어보기
+
+if (friends.includes('Steven')) {
+  console.log('You have a friend called Peter')
 }
-const years = [1990, 1967, 2002, 2010, 2018]
-
-// console.log(calcAge(years)) // Nan
-const age1 = calcAge(years[0])
-const age2 = calcAge(years[1])
-const age3 = calcAge(years[years.length - 1])
-console.log(age1, age2, age3)
-
-const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length - 1])]
-console.log(ages)
