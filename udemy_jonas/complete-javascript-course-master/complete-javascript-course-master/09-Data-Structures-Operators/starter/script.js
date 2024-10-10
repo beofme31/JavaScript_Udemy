@@ -32,50 +32,100 @@ const restaurant = {
 
   orderDelivery: function ({ starterIndex = 1, mainIndex = 0, time = '20:00', address }) {
     console.log(`Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`);
+  },
+
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(`Here is your delicious pasta with ${ing1}, ${ing2} and ${ing3}`)
   }
 };
 
-restaurant.orderDelivery({
-  time: '22:30',
-  address: 'Via del Sole, 21',
-  mainIndex: 2,
-  starterIndex: 2,
-});
+const arr = [7, 8, 9];
+const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
+console.log(badNewArr);
 
-restaurant.orderDelivery({
-  address: 'Via del Sole, 21',
-  starterIndex: 1,
+const newArr = [1, 2, ...arr];
+console.log(newArr);
 
-})
+console.log(...newArr);
+console.log(1, 2, 7, 8, 9)
 
-const { name, openingHours, categories } = restaurant;
-console.log(name, openingHours, categories);
+const newMenu = [...restaurant.mainMenu, 'Gnocci']
+console.log(newMenu);
 
-const { name: restaurantName, openingHours: hours, categories: tags } = restaurant;
-console.log(restaurantName, hours, tags);
+// Copy array
+const mainMenuCopy = [...restaurant.mainMenu]
 
-// Default values
-const { menu = [], starterMenu: starters = [] } = restaurant
-console.log(menu, starters);
+// Join 2 arrays
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+console.log(menu);
 
-// Mutating variables
-let a = 111;
-let b = 999;
+// Iterables: arrays, strings, maps, sets. Not objects
+const str = 'Jonas';
+const letters = [...str, ' ', 'S.'];
+console.log(letters);
+console.log(...str);
+// console.log(`${...str} Schmedtmann`)
 
-const obj = { a: 23, b: 7, c: 14 };
+// Real-world example
+const ingredients = [
+  // prompt("Let\'s make pasta! Ingredient 1?"),
+  // prompt('Ingredient 2?'),
+  // prompt('Ingredient 3?'),
+];
+console.log(ingredients);
 
-// 중괄호로 시작하면 js는 코드 블록을 예상한다.
-// { a, b } = obj;
-({ a, b } = obj);
-console.log(a, b);
+restaurant.orderPasta(ingredients[0], ingredients[1], ingredients[2]);
+restaurant.orderPasta(...ingredients);
 
-// Nested objects
-const {
-  fri: { open: o, close: c }
-} = openingHours;
-console.log(o, c);
+// Objects
+const newRestaurant = { foundedIn: 1998, ...restaurant, founder: 'Guiseppe' }
+console.log(newRestaurant);
 
+const restaurantCopy = { ...restaurant };
+restaurantCopy.name = 'Ristorante Roma';
+console.log(restaurantCopy.name);
+console.log(restaurant.name);
 
+// Destructing Objects
+// restaurant.orderDelivery({
+//   time: '22:30',
+//   address: 'Via del Sole, 21',
+//   mainIndex: 2,
+//   starterIndex: 2,
+// });
+
+// restaurant.orderDelivery({
+//   address: 'Via del Sole, 21',
+//   starterIndex: 1,
+
+// })
+
+// const { name, openingHours, categories } = restaurant;
+// console.log(name, openingHours, categories);
+
+// const { name: restaurantName, openingHours: hours, categories: tags } = restaurant;
+// console.log(restaurantName, hours, tags);
+
+// // Default values
+// const { menu = [], starterMenu: starters = [] } = restaurant
+// console.log(menu, starters);
+
+// // Mutating variables
+// let a = 111;
+// let b = 999;
+
+// const obj = { a: 23, b: 7, c: 14 };
+
+// // 중괄호로 시작하면 js는 코드 블록을 예상한다.
+// // { a, b } = obj;
+// ({ a, b } = obj);
+// console.log(a, b);
+
+// // Nested objects
+// const {
+//   fri: { open: o, close: c }
+// } = openingHours;
+// console.log(o, c);
 
 // const arr = [2, 3, 4]
 // const a = arr[0]
