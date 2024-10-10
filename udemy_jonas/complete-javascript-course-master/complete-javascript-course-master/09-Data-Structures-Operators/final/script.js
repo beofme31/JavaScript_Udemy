@@ -80,7 +80,7 @@ The input will come from a textarea inserted into the DOM (see code below), and 
 
 THIS TEST DATA (pasted to textarea)
 underscore_case
- first_name
+  first_name
 Some_Variable 
   calculate_AGE
 delayed_departure
